@@ -6,3 +6,9 @@
 /obj/Debug/net8.0/SCM.AssemblyInfo.cs
 /obj/Debug/net8.0/SCM.AssemblyInfoInputs.cache
 /.vs/SCM/v17/.suo
+/obj/Debug/net8.0/SCM.assets.cache
+/obj/Debug/net8.0/SCM.csproj.AssemblyReference.cache
+/obj/project.assets.json
+/obj/project.nuget.cache
+/obj/SCM.csproj.nuget.dgspec.json
+/obj/SCM.csproj.nuget.g.targets
