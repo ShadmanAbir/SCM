@@ -1,6 +1,6 @@
-﻿namespace SCM.Model
+﻿namespace SCM.Model.Items
 {
-    public class ItemMaster_tbl:BaseEntity
+    public class ItemMaster_tbl : BaseEntity
     {
         public int ItemID { get; set; }
         public string ItemName { get; set; }

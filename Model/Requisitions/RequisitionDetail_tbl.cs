@@ -1,19 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace SCM.Model
+namespace SCM.Model.Requisitions
 {
     public class RequisitionDetail_tbl : BaseEntity
     {
-        [Key] 
+        [Key]
         public int RequisitionDetailID { get; set; }
         public int RequisitionID { get; set; }
         public int ItemID { get; set; }
 
-        [Column(TypeName = "decimal(18, 10)")] 
+        [Column(TypeName = "decimal(18, 10)")]
         public decimal RequiredQTY { get; set; }
 
-        [Column(TypeName = "date")] 
+        [Column(TypeName = "date")]
         public DateTime? TargetDate { get; set; }
         public bool? IsCompleted { get; set; }
         public string? Remarks { get; set; }

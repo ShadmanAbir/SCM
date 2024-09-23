@@ -1,4 +1,4 @@
-﻿namespace SCM.Model
+﻿namespace SCM.Model.Items
 {
     public class ItemBase_tbl : BaseEntity
     {
