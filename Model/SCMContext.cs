@@ -17,10 +17,10 @@ namespace SCM.Model
             base.OnModelCreating(builder);
         }
 
-        public DbSet<Category_tbl> Category_tbl { get; set; }
-        public DbSet<ItemBase_tbl> ItemBase_tbl { get; set; }
-        public DbSet<ItemMaster_tbl> BorrowdItemMaster_tblBooks { get; set; }
-        public DbSet<RequisitionMaster_tbl> RequisitionMaster_tbl { get; set; }
-        public DbSet<RequisitionDetail_tbl> RequisitionDetail_tbl { get; set; }
+        public DbSet<Category> Category { get; set; }
+        public DbSet<ItemBase> ItemBase { get; set; }
+        public DbSet<ItemMaster> ItemMaster { get; set; }
+        public DbSet<RequisitionMaster> RequisitionMaster { get; set; }
+        public DbSet<RequisitionDetail> RequisitionDetail { get; set; }
     }
 }

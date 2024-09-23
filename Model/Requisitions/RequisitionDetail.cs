@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SCM.Model.Requisitions
 {
-    public class RequisitionDetail_tbl : BaseEntity
+    public class RequisitionDetail : BaseEntity
     {
         [Key]
         public int RequisitionDetailID { get; set; }

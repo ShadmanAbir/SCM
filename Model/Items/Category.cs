@@ -1,6 +1,6 @@
 ﻿namespace SCM.Model.Items
 {
-    public class Category_tbl : BaseEntity
+    public class Category : BaseEntity
     {
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
