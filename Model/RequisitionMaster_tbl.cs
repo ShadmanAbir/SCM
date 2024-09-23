@@ -15,7 +15,5 @@ namespace SCM.Model
         public DateTime RequisitionDate { get; set; }
         [Column(TypeName = "date")] 
         public DateTime EstimatedRequiredDate { get; set; }
-        [Required][StringLength(500)] 
-        public string Note { get; set; }
     }
 }
