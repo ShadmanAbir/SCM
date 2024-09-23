@@ -12,3 +12,8 @@
 /obj/project.nuget.cache
 /obj/SCM.csproj.nuget.dgspec.json
 /obj/SCM.csproj.nuget.g.targets
+/bin/Debug/net8.0
+/obj/Debug/net8.0
+/.vs/SCM/config
+/obj/SCM.csproj.nuget.g.props
+/.vs/SCM/v17/DocumentLayout.json
