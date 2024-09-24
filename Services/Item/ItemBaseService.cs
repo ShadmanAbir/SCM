@@ -17,7 +17,7 @@ namespace SCM.Services.Item
             throw new NotImplementedException();
         }
 
-        public List<ItemBaseViewModel> GetAllItem()
+        public async Task<List<ItemBaseViewModel>> GetAllItem()
         {
             throw new NotImplementedException();
         }
