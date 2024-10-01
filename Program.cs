@@ -1,10 +1,14 @@
 using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.EntityFrameworkCore;
 using SCM.Helper;
+using SCM.Interfaces;
 using SCM.Interfaces.Item;
+using SCM.Interfaces.Items;
 using SCM.Model;
 using SCM.Model.Items;
+using SCM.Services.Categorys;
 using SCM.Services.Items;
+using SCM.Services.Requisition;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +26,8 @@ builder.Services.AddCors(options =>
     });
 });
 builder.Services.AddTransient<IItemService, ItemService>();
+builder.Services.AddTransient<ICategoryService, CategoryService>();
+builder.Services.AddTransient<IRequisitionService, RequisitionService>();
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 builder.Services.AddEndpointsApiExplorer();
