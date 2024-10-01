@@ -16,6 +16,5 @@ namespace SCM.ViewModel.Requisitions
         public DateTime? TargetDate { get; set; }
         public bool? IsCompleted { get; set; }
         public string? Remarks { get; set; }
-        public RequisitionMasterViewModel Requisition { get; set; }
     }
 }

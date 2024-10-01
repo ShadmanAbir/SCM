@@ -19,6 +19,6 @@ namespace SCM.Model.Requisitions
         public bool? IsCompleted { get; set; }
         public string? Remarks { get; set; }
 
-        public RequisitionMaster RequisitionMaster { get; set; }
+        public RequisitionMaster? RequisitionMaster { get; set; }
     }
 }
