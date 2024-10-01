@@ -1,22 +1,29 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SCM.Interfaces.Item;
+using SCM.Model.Items;
 namespace SCM.Controllers.Item
 {
     [Route("api/[controller]")]
     [ApiController]
     public class CategoryController : ControllerBase
     {
+        private readonly IItemService _itemService;
+        public CategoryController(IItemService itemService)
+        {
+            _itemService = itemService;
+        }
         // GET: api/<CategoryController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<IList<CategoryViewModel>>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok(await _itemService.GetAllItem());
         }
 
         // GET api/<CategoryController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<ActionResult<CategoryViewModel>> Get(int id)
         {
-            return "value";
+            return null;
         }
 
         // POST api/<CategoryController>

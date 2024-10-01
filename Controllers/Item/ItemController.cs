@@ -8,34 +8,36 @@ namespace SCM.Controllers.Item
     [ApiController]
     public class ItemController : ControllerBase
     {
-        private readonly IIteamBaseService _iteamBaseService;
-        public ItemController(IIteamBaseService iteamBaseService)
+        private readonly IItemService _itemService;
+        public ItemController(IItemService itemService)
         {
-            _iteamBaseService = iteamBaseService;
+            _itemService = itemService;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ItemBaseViewModel>>> Get()
+        public async Task<ActionResult<IEnumerable<ItemViewModel>>> Get()
         {
-            return await _iteamBaseService.GetAllItem();
+            return await _itemService.GetAllItem();
         }
 
         
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<ActionResult<ItemViewModel>> Get(int id)
         {
-            return "value";
+            return await _itemService.GetItemByID(id);
         }
 
         
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<bool>> Post(ItemViewModel itemVM)
         {
+            return Ok(await _itemService.AddItem(itemVM));
         }
 
         
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult<bool>> Put(int id, ItemViewModel itemVM)
         {
+            return Ok(await _itemService.Updatetem(id, itemVM));
         }
 
         

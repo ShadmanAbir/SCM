@@ -4,7 +4,7 @@ using SCM.Helper;
 using SCM.Interfaces.Item;
 using SCM.Model;
 using SCM.Model.Items;
-using SCM.Services.Item;
+using SCM.Services.Items;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +21,7 @@ builder.Services.AddCors(options =>
                .AllowAnyHeader();
     });
 });
-builder.Services.AddTransient<IIteamBaseService, ItemBaseService>();
+builder.Services.AddTransient<IItemService, ItemService>();
 builder.Services.AddControllers();
 builder.Services.AddAutoMapper(typeof(MapperProfile));
 builder.Services.AddEndpointsApiExplorer();
@@ -38,6 +38,12 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
+/*if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Development")
+{
+    app.Urls.Add("http://74.208.32.241:84");
+    app.Urls.Add("http://localhost:84");
+}
+*/
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -45,7 +51,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

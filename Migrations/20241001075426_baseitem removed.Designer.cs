@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SCM.Model;
 
@@ -11,9 +12,11 @@ using SCM.Model;
 namespace SCM.Migrations
 {
     [DbContext(typeof(SCMContext))]
-    partial class SCMContextModelSnapshot : ModelSnapshot
+    [Migration("20241001075426_baseitem removed")]
+    partial class baseitemremoved
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

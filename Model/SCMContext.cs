@@ -18,8 +18,7 @@ namespace SCM.Model
         }
 
         public DbSet<Category> Category { get; set; }
-        public DbSet<ItemBase> ItemBase { get; set; }
-        public DbSet<ItemMaster> ItemMaster { get; set; }
+        public DbSet<Item> Item { get; set; }
         public DbSet<RequisitionMaster> RequisitionMaster { get; set; }
         public DbSet<RequisitionDetail> RequisitionDetail { get; set; }
     }

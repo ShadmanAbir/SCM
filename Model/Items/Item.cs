@@ -2,11 +2,11 @@
 
 namespace SCM.Model.Items
 {
-    public class ItemBaseViewModel : BaseViewModel
+    public class Item : BaseEntity
     {
         [Key]
-        public int BaseItemID { get; set; }
-        public string BaseItemName { get; set; }
+        public int ItemID { get; set; }
+        public string ItemName { get; set; }
         public int CategoryID { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace SCM.Model.Items
 {
-    public class ItemMaster : BaseEntity
+    public class ItemViewModel : BaseViewModel
     {
         [Key]
         public int ItemID { get; set; }

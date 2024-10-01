@@ -11,8 +11,7 @@ namespace SCM.Helper
         public MapperProfile()
         {
             CreateMap<Category, CategoryViewModel>().ReverseMap();
-            CreateMap<ItemBase, ItemBaseViewModel>().ReverseMap();
-            CreateMap<ItemMaster, ItemMasterViewModel>().ReverseMap();
+            CreateMap<Item, ItemViewModel>().ReverseMap();
             CreateMap<RequisitionMaster, RequisitionMasterViewModel>().ReverseMap();
             CreateMap<RequisitionDetail, RequisitionDetailViewModel>().ReverseMap();
         }
