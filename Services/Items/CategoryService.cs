@@ -40,8 +40,6 @@ namespace SCM.Services.Categorys
              {
                  throw new FileNotFoundException();
              }
-
-             // Map the entity to a ViewModel using AutoMapper
              return _mapper.Map<CategoryViewModel?>(item);
          });
         }

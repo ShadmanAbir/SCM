@@ -7,6 +7,7 @@ namespace SCM.Model.Requisitions
     {
         [Key]
         public int RequisitionDetailID { get; set; }
+        [ForeignKey("RequisitionMaster")]
         public int RequisitionID { get; set; }
         public int ItemID { get; set; }
 
@@ -17,5 +18,7 @@ namespace SCM.Model.Requisitions
         public DateTime? TargetDate { get; set; }
         public bool? IsCompleted { get; set; }
         public string? Remarks { get; set; }
+
+        public RequisitionMaster RequisitionMaster { get; set; }
     }
 }

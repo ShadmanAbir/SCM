@@ -2,7 +2,7 @@
 
 namespace SCM.ViewModel.Items
 {
-    public class CategoryViewModel : BaseViewModel
+    public class CategoryViewModel
     {
         [Key]
         public int CategoryID { get; set; }

@@ -15,5 +15,7 @@ namespace SCM.Model.Requisitions
         public DateTime RequisitionDate { get; set; }
         [Column(TypeName = "date")]
         public DateTime EstimatedRequiredDate { get; set; }
+
+        public ICollection<RequisitionDetail> Details { get; set; }
     }
 }

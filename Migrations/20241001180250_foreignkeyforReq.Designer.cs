@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SCM.Model;
 
@@ -11,9 +12,11 @@ using SCM.Model;
 namespace SCM.Migrations
 {
     [DbContext(typeof(SCMContext))]
-    partial class SCMContextModelSnapshot : ModelSnapshot
+    [Migration("20241001180250_foreignkeyforReq")]
+    partial class foreignkeyforReq
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -325,6 +328,9 @@ namespace SCM.Migrations
                     b.Property<int>("RequisitionID")
                         .HasColumnType("int");
 
+                    b.Property<int>("RequisitionMasterRequisitionID")
+                        .HasColumnType("int");
+
                     b.Property<int?>("Status")
                         .HasColumnType("int");
 
@@ -333,7 +339,7 @@ namespace SCM.Migrations
 
                     b.HasKey("RequisitionDetailID");
 
-                    b.HasIndex("RequisitionID");
+                    b.HasIndex("RequisitionMasterRequisitionID");
 
                     b.ToTable("RequisitionDetail");
                 });
@@ -432,7 +438,7 @@ namespace SCM.Migrations
                 {
                     b.HasOne("SCM.Model.Requisitions.RequisitionMaster", "RequisitionMaster")
                         .WithMany("Details")
-                        .HasForeignKey("RequisitionID")
+                        .HasForeignKey("RequisitionMasterRequisitionID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

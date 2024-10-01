@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SCM.ViewModel.Requisitions
 {
-    public class RequisitionDetailViewModel : BaseViewModel
+    public class RequisitionDetailViewModel
     {
-        [Key]
         public int RequisitionDetailID { get; set; }
         public int RequisitionID { get; set; }
         public int ItemID { get; set; }

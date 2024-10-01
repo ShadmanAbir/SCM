@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SCM.ViewModel.Requisitions
 {
-    public class RequisitionMasterViewModel : BaseViewModel
+    public class RequisitionMasterViewModel
     {
-        [Key]
         public int RequisitionID { get; set; }
 
         [Required]
@@ -15,5 +14,7 @@ namespace SCM.ViewModel.Requisitions
         public DateTime RequisitionDate { get; set; }
         [Column(TypeName = "date")]
         public DateTime EstimatedRequiredDate { get; set; }
+
+        public List<RequisitionDetailViewModel?> Details { get; set; }
     }
 }
