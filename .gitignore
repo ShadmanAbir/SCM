@@ -28,3 +28,4 @@
 /.config
 /obj
 /Properties/PublishProfiles
+/obj/Debug/net8.0/SCM.GeneratedMSBuildEditorConfig.editorconfig
