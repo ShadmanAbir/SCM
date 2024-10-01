@@ -16,31 +16,6 @@ namespace SCM.Services.Categorys
             _scmContext = scmContext;
             _mapper = mapper;
         }
-       /* public bool AddCategory(CategoryViewModel categoryVM)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<CategoryViewModel> GetAllCategory()
-        {
-            throw new NotImplementedException();
-        }
-
-        public CategoryViewModel GetCategoryByID(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool RemoveCategory(CategoryViewModel categoryVM)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Updatetem(CategoryViewModel categoryVM)
-        {
-            throw new NotImplementedException();
-        }*/
-
         public ValueTask<bool> AddCategory(CategoryViewModel itemVM)
         {
 
@@ -79,7 +54,7 @@ namespace SCM.Services.Categorys
             return ValueTask.FromResult(_scmContext.SaveChangesAsync().Result == 1 ? true : false);
         }
 
-        public ValueTask<bool> Updatetem(int id, CategoryViewModel itemVM)
+        public ValueTask<bool> UpdateCategory(int id, CategoryViewModel itemVM)
         {
             var data = _scmContext.Category.SingleOrDefault(a => a.CategoryID == id);
             data.CategoryName = itemVM.CategoryName;

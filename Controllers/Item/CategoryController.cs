@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SCM.Interfaces.Item;
+using SCM.Interfaces.Items;
+using SCM.Model.Items;
 using SCM.ViewModel.Items;
 namespace SCM.Controllers.Item
 {
@@ -7,41 +9,44 @@ namespace SCM.Controllers.Item
     [ApiController]
     public class CategoryController : ControllerBase
     {
-        private readonly IItemService _itemService;
-        public CategoryController(IItemService itemService)
+        private readonly ICategoryService _categoryService;
+        public CategoryController(ICategoryService categoryService)
         {
-            _itemService = itemService;
+            _categoryService = categoryService;
         }
-        // GET: api/<CategoryController>
+        
         [HttpGet]
         public async Task<ActionResult<IList<CategoryViewModel>>> Get()
         {
-            return Ok(await _itemService.GetAllItem());
+            return Ok(await _categoryService.GetAllCategory());
         }
 
-        // GET api/<CategoryController>/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<CategoryViewModel>> Get(int id)
         {
-            return null;
+            return Ok(await _categoryService.GetCategoryByID(id));
         }
 
-        // POST api/<CategoryController>
+        
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<ActionResult<bool>> Post(CategoryViewModel categoryVM)
         {
+            return Ok(await _categoryService.AddCategory(categoryVM));
         }
 
-        // PUT api/<CategoryController>/5
+        
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<ActionResult<bool>> Put(int id, CategoryViewModel categoryVM)
         {
+            return Ok(await _categoryService.UpdateCategory(id, categoryVM));
         }
 
-        // DELETE api/<CategoryController>/5
+        
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult<bool>> Delete(int id)
         {
+            return Ok(await _categoryService.RemoveCategory(id));
         }
     }
 }

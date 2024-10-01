@@ -7,7 +7,7 @@ namespace SCM.Interfaces.Items
         public Task<List<CategoryViewModel>> GetAllCategory();
         public Task<CategoryViewModel> GetCategoryByID(int ID);
         public ValueTask<bool> AddCategory(CategoryViewModel categoryVM);
-        public ValueTask<bool> Updatetem(int id,CategoryViewModel categoryVM);
+        public ValueTask<bool> UpdateCategory(int id,CategoryViewModel categoryVM);
         public ValueTask<bool> RemoveCategory(int id);
     }
 }
