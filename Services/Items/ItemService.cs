@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using SCM.Interfaces.Item;
 using SCM.Model;
 using SCM.Model.Items;
+using SCM.ViewModel.Items;
 
 namespace SCM.Services.Items
 {

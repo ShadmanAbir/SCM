@@ -1,4 +1,4 @@
-﻿using SCM.Model.Items;
+﻿using SCM.ViewModel.Items;
 
 namespace SCM.Interfaces.Item
 {

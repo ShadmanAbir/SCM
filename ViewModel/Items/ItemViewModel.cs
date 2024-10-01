@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SCM.Model.Items
+namespace SCM.ViewModel.Items
 {
     public class ItemViewModel : BaseViewModel
     {

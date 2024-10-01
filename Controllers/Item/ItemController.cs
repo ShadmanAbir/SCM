@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SCM.Interfaces.Item;
 using SCM.Model.Items;
+using SCM.ViewModel.Items;
 
 namespace SCM.Controllers.Item
 {
@@ -42,8 +43,9 @@ namespace SCM.Controllers.Item
 
         
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<ActionResult<bool>> Delete(int id)
         {
+            return Ok(await _itemService.RemoveItem(id));
         }
     }
 }

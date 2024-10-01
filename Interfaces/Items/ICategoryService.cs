@@ -1,13 +1,13 @@
-﻿using SCM.Model.Items;
+﻿using SCM.ViewModel.Items;
 
-namespace SCM.Interfaces.Item
+namespace SCM.Interfaces.Items
 {
     public interface ICategoryService
     {
-        public List<CategoryViewModel> GetAllCategory();
-        public CategoryViewModel GetCategoryByID(int ID);
-        public bool AddCategory(CategoryViewModel categoryVM);
-        public bool Updatetem(CategoryViewModel categoryVM);
-        public bool RemoveCategory(CategoryViewModel categoryVM);
+        public Task<List<CategoryViewModel>> GetAllCategory();
+        public Task<CategoryViewModel> GetCategoryByID(int ID);
+        public ValueTask<bool> AddCategory(CategoryViewModel categoryVM);
+        public ValueTask<bool> Updatetem(int id,CategoryViewModel categoryVM);
+        public ValueTask<bool> RemoveCategory(int id);
     }
 }

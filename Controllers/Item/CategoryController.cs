@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SCM.Interfaces.Item;
-using SCM.Model.Items;
+using SCM.ViewModel.Items;
 namespace SCM.Controllers.Item
 {
     [Route("api/[controller]")]

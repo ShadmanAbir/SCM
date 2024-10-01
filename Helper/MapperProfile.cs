@@ -1,8 +1,9 @@
 ﻿using AutoMapper.Execution;
 using AutoMapper;
-using static System.Reflection.Metadata.BlobBuilder;
 using SCM.Model.Items;
 using SCM.Model.Requisitions;
+using SCM.ViewModel.Items;
+using SCM.ViewModel.Requisitions;
 
 namespace SCM.Helper
 {

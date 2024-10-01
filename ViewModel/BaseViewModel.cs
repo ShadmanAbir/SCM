@@ -1,4 +1,4 @@
-﻿namespace SCM.Model
+﻿namespace SCM.ViewModel
 {
     public class BaseViewModel
     {

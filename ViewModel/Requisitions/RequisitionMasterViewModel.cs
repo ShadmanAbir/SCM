@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace SCM.Model.Requisitions
+namespace SCM.ViewModel.Requisitions
 {
     public class RequisitionMasterViewModel : BaseViewModel
     {
